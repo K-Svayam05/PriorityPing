@@ -1,0 +1,11 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "app.py", "use": "@vercel/python" }
+    ],
+    "routes": [
+      { "src": "/slack/events", "dest": "app.py" },
+      { "src": "/process_message", "dest": "app.py" },
+      { "src": "/", "dest": "app.py" }
+    ]
+  }
